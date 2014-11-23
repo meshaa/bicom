@@ -88,31 +88,7 @@
         <tr><td colspan="2" class="Leerzeilen"></td></tr>
         <tr><td class="lbl">Password</td><td><input type="text" name="password" class="txt" id="signUp_password" /></td></tr>
        
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
-        <tr><td class="lbl"></td><td><input value="-" type="hidden" name="email" class="txt" id="signUp_email" /></td></tr>
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
         
-          <tr><td class="lbl"></td><td><input value="-" type="hidden" name="userName" class="txt" id="signUp_userName" /></td></tr>
-        
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
-        <tr><td class="lbl"></td><td><input value="-" type="hidden" name="name" class="txt" id="signUp_name" /></td></tr>
-        
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
-       
-        
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
-		<tr><td class="lbl"></td><td><input value="-" type="hidden" name="postalCode" class="txt" id="signUp_postalCode" /></td></tr>
-		<tr><td colspan="2" class="Leerzeilen"></td></tr>
-        <tr><td class="lbl"></td><td><input  value="-" type="hidden" class="txt"  id="signUp_city"></tr>
-        <tr><td colspan="2" class="Leerzeilen"></td></tr>
-        <tr><td class="lbl"></td><td></td></tr>
-       <tr><td colspan="2" class="Leerzeilen"></td></tr>
-       <tr><td class="lbl"></td><td><input value="-" type="hidden" name="title" id="signUp_title" class="txt" /></td></tr>
-          
-       <tr><td colspan="2" class="Leerzeilen"></td></tr>
-       
-       <tr><td colspan="2" class="Leerzeilen" style="height:15px;"></td></tr>
-	   <tr><td colspan="2" align="center">  <a href="agb.php" target="_blank" style="color:#246074; text-decoration:none;"></a> 
 	   <tr><td colspan="2" class="Leerzeilen"></td></tr>
        <tr><td><input type="button" value="Add user!" id="sendTo" onclick="signUp()" /></td></tr>
     </table>
