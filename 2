@@ -9,12 +9,13 @@ int main(int argc, char** argv) {
     
     int count;    
   
-   if (strcmp(argv[1], "./program") == 0)
+   
    
  if (argc > 1)
     {
      for(int count = 1;count < argc; count++)
-     cout<<'\n';
+     if (strcmp(argv[1], "./program") == 0)
+     cout<<'\0';
     }
 else
     {
