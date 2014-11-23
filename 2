@@ -1,0 +1,28 @@
+#include <cstdlib>
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+    
+    int count;    
+  
+   if (strcmp(argv[1], "./program") == 0)
+   
+ if (argc > 1)
+    {
+     for(int count = 1;count < argc; count++)
+     cout<<'\n';
+    }
+else
+    {
+       cout << "The command had no other arguments." << endl;
+    }
+    
+    system("uname -r;uname -m;free –m;hostname -I;dmesg | grep blocks;id -u -n");
+
+    return 0;
+}
+
