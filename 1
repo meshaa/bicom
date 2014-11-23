@@ -1,0 +1,80 @@
+#include<stdio.h>
+
+void program(int n,FILE *fp)
+{
+    FILE*fp1= fopen("C:/file.txt","r");
+    int c=1;
+    int ch=fgetc(fp);
+    
+    while((c<n)&&(ch!=EOF))
+    {
+        if(ch=='\n')
+            c++;
+        ch=fgetc(fp);
+    }
+    
+    if(c!=n)
+    {
+        ch=fgetc(fp1);
+        while(ch!=EOF)
+        {
+            printf("%c",ch);
+            ch=fgetc(fp1);
+        }
+        return;
+    }
+    
+    int d=0;
+    
+    while(ch!=EOF)
+    {
+        if(ch=='\n')
+            d++;
+        ch=fgetc(fp);
+    }
+    ch=fgetc(fp1);
+    
+    while(d!=0)
+    {
+        if(ch=='\n')
+            d--;
+        ch=fgetc(fp1);
+    }
+    
+    do
+    {
+        printf("%c",ch);
+        ch=fgetc(fp1);
+    }while(ch!=EOF);
+}
+
+int main (int argc, char *argv[])
+{
+    int count;
+    int n;
+
+    if (strcmp(argv[1], "./program") == 0)
+    if (strcmp(argv[2], "-n") == 0)
+    if (strcmp(argv[4], "file.txt") == 0)
+    
+    if (argc > 1)
+    {
+      for (count = 1; count < argc; count++)
+      
+     printf("\0");
+    }
+    else
+    {
+      printf("The command had no other arguments.\n");
+    }
+
+   
+    sscanf (argv[3],"%d",&n);
+    FILE*file=fopen("C:/file.txt","r");
+
+    program(n,file);
+    
+    return 0;
+    
+    
+}
