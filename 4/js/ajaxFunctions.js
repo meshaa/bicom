@@ -108,12 +108,12 @@ function signUp()
 	
 	var name=$("#signUp_name").val();
 	var userName=$("#signUp_userName").val();
-	var email=$("#signUp_email").val();
+	var adress=$("#signUp_adress").val();
      
-	var phone=$("#signUp_phone").val();
+	var password=$("#signUp_password").val();
 	
 
-	if(city=="" || city==" " || name=="" || name==" " || userName=="" || userName==" " || email=="" || email==" "  || phone=="" || phone==" ")
+	if( name=="" || name==" " || userName=="" || userName==" " || adress=="" || adress==" "  || password=="" || password==" ")
 	{
 		alert("Bitte füllen Sie die leeren Bereiche.")
 		return false;
@@ -132,7 +132,7 @@ function signUp()
 		$.ajax({
 			type: 'POST',
 			url: 'ajax/signUp.php',
-			data: 'name='+name+'&userName='+userName+'&email='+email+'&phone='+phone,
+			data: 'name='+name+'&userName='+userName+'&adress='+adress+'&password='+password,
 			success: function(ajaxCevap) 
 			{
 				
@@ -159,12 +159,12 @@ function signUpStep2()
 function sendWebsiteInquiry()
 {
 	var name=$("#mailform_name").val();
-	var email=$("#mailform_email").val();
+	var adress=$("#mailform_adress").val();
        
-	var phone=$("#mailform_phone").val();
+	var password=$("#mailform_password").val();
 	
 
-	if(city=="" || city==" " || name=="" || name==" " || email=="" || email==" " || phone=="" || phone==" " )
+	if( name=="" || name==" " || adress=="" || adress==" " || password=="" || password==" " )
 	{
 		alert("Bitte füllen Sie die leeren Bereiche.")
 		return false;
@@ -179,7 +179,7 @@ function sendWebsiteInquiry()
 		$.ajax({
 			type: 'POST',
 			url: 'ajax/sendWebsiteInquiry.php',
-			data: 'name='+name+'&email='+email+'&phone='+phone,
+			data: 'name='+name+'&adress='+adress+'&password='+password,
 			success: function(ajaxCevap) 
 			{
 				
@@ -191,12 +191,12 @@ function sendWebsiteInquiry()
 function sendContactInquiry()
 {
 	var name=$("#mailform2_name").val();
-	var email=$("#mailform2_email").val();
+	var adress=$("#mailform2_adress").val();
         
-	var phone=$("#mailform2_phone").val();
+	var password=$("#mailform2_password").val();
 	
 
-	if(name=="" || name==" " || email=="" || email==" " || phone=="" || phone==" " )
+	if(name=="" || name==" " || adress=="" || adress==" " || password=="" || password==" " )
 	{
 		alert("Bitte füllen Sie die leeren Bereiche.")
 		return false;
@@ -210,7 +210,7 @@ function sendContactInquiry()
 		$.ajax({
 			type: 'POST',
 			url: 'ajax/sendContactInquiry.php',
-			data: 'name='+name+'&email='+email+'&phone='+phone,
+			data: 'name='+name+'&adress='+adress+'&password='+password,
 			success: function(ajaxCevap) 
 			{
 				
