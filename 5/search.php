@@ -3,7 +3,7 @@
         $k=0;
         
 
-?><body>
+?>
 <?php
 	include("config.php");
 	include("top2.php");
@@ -100,14 +100,7 @@
 	}
         
 ?>
-<p>&nbsp;</p>
-                        <p>&nbsp;</p>
-    <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                         <p>&nbsp;</p><!---------------------------------------------------------------------------------------->
-    <!---------------------------------------------------------------------------------------->
-    <!-------------------------------pocetak content dijela...------------------------------------->
-    
+
 <div id="content">
     
 
@@ -119,6 +112,7 @@
         <?php
 		endif;
 		?>
+		
         <div id="map">
             <?php
             	while($fetch=mysql_fetch_array($company)): $cityId=$fetch['cityId'];
@@ -131,9 +125,7 @@
                                 
             ?>
 			
-			<p class="point">
-
-                        </p>
+			<p class="point"></p>
                         
                         
             	<div class="company">
@@ -143,7 +135,6 @@
                             <td align="left" class="col1"><p class="name" >Name: <a href="person.php?companyId=<?=$fetch['companyId'];?>"><?=$fetch['companyName'];?></a>&nbsp;&nbsp;</p>
                                
                            
-                                  
                                   
                                  <p class="name" >
                                 <?php 
@@ -157,9 +148,9 @@
                         		<p class="adress">Username: <?=$fetch['$contactPerson_name']; ?><br></p>
                             	
                                   <p class="web"> 
-<?php 
+                               <?php 
                                echo "E-mail: ";
-							   if ($fetch['adress'])
+			       if ($fetch['adress'])
                                 {
                                  
                                 echo $fetch['adress'];
@@ -176,31 +167,18 @@
                               
                             </td>
                             
-                            <td><p style="padding: 1px;"></td>
-                             
-                            <td>
-                                
-                            </td>
-                            <td><p style="padding: 30px;"></td>
-                            <td>
+                            
                           
                             </div> 
                             </td>
                             
-                            <td><p style="padding: 30px;"></td>
                             
-                            <td>
-                            
-                            </td>
-                            
-                            
-                                                     
                             
                         
                         </tr>
                     </table>
                 </div>
-            <?php
+                       <?php
             
 				endwhile;
 				
@@ -229,8 +207,6 @@
 <!---------------------------------------Kraj kontent dijela........------------------------->
     
 
-
-</body>
 
 <style type="text/css">
     .slika
