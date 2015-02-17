@@ -24,10 +24,10 @@
 			
 	$link="search.php?".$_SERVER['QUERY_STRING'];
 	
-	//if name/business got a content and place/postalCode is empty
+
 	if(!empty($was) && empty($wo))
 	{
-		//if business is choosen
+		
 		if($type=="branche")
 		{
 			$businessData=mysql_fetch_array(mysql_query("SELECT * FROM business WHERE businessName='$was'"));
@@ -37,7 +37,7 @@
 			$limit=$page*10;
 			$company=mysql_query("SELECT * FROM company WHERE businessId='".$businessData['businessId']."' ORDER BY companyName ASC LIMIT $limit,10");
 		}
-		//if name is choosen
+	
 		else if($type=="name")
 		{
 			$company_count=mysql_fetch_array(mysql_query("SELECT COUNT(companyId) as total FROM company WHERE companyName LIKE '$was%'"));
@@ -48,7 +48,7 @@
 		}
 	}
 	
-	//if name/business are empty and place/postalCode got a content
+
 	if(empty($was) && !empty($wo))
 	{
 		$cityData=mysql_fetch_array(mysql_query("SELECT * FROM city WHERE cityName='$wo' OR postalCode='$wo'"));
@@ -59,7 +59,7 @@
         	$company=mysql_query("SELECT * FROM company WHERE cityId='".$cityData['cityId']."' ORDER BY companyName ASC LIMIT $limit,10");	
 	}
 	
-	//if name/business and place/postalCode got a content
+	
 	if(!empty($was) && !empty($wo))
 	{	
 		if($type=="branche")
