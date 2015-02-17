@@ -72,7 +72,6 @@ error_reporting( error_reporting() & ~E_NOTICE );
 	</form>
 </div>	
 
-
 <div id="signUp" style="display:none;">
 	<p style="padding:0;margin:0;color:#246074;font-family:Rockwell;font-size:22px;">Add User</p>
 	<table border="0" cellpadding="0" cellspacing="0" id="signUptableform">
