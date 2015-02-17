@@ -6,7 +6,6 @@ ob_start(); session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Bicom</title>
 
-
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="js/jsFunctions.js"></script>
@@ -14,7 +13,6 @@ ob_start(); session_start(); ?>
 <script type="text/javascript">
 $(document).ready(function()
 {
-	
 	$("#overlay").css("height",($(document).height()+270)+"px");
 	$(document).click(function(e)
 	{
@@ -51,6 +49,7 @@ $(document).ready(function()
 	});	
 });
 </script>
+
 <style type="text/css">
 body{margin:0;padding:0;}
 div#container
@@ -58,8 +57,6 @@ div#container
     margin:0px auto;
     width:980px;
     border:solid 0px;
-	
-	
 }
 
 table#ustlayout{margin-top:10px; width:100%;}
@@ -134,7 +131,6 @@ div#signUp table td .txt{width:250px;}
 div#signUp table td .txtarea{width:250px; height:60px;}
 div#signUp table td.Leerzeilen{height:3px;}
 
-
 table.update{font-family:Myriad Pro; font-size:16px;}	
 table.update td.lbl{width:170px;}	
 table.update td .txt{width:250px;}
@@ -182,7 +178,6 @@ div#flags{margin-bottom: 10px; spacing: 10px; width: 100%;}
 </style>
 
 	<script type="text/javascript" src="ripter-jquery.rating/js/jquery-1.6.1.min.js"></script>
-	
 	<script type="text/javascript" src="ripter-jquery.rating/jquery.rating.js"></script>
 	<link rel="stylesheet" media="screen" type="text/css" href="ripter-jquery.rating/jquery.rating.css" />
 	
@@ -201,6 +196,7 @@ div#flags{margin-bottom: 10px; spacing: 10px; width: 100%;}
 		});		
 	
 	</script>
+	
 	<style type="text/css">
   html { height: 100% }
   body { height: 100%; margin: 0; padding: 0 }
