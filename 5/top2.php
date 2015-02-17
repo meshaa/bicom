@@ -111,7 +111,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 				if($_SESSION['data'] === null):
                                     //if($_SESSION['data']==null):
 			?>
-        	<a href="javascript:openSignInForm()">Einloggen</a> | <a href="javascript:openSignUpForm()">Registrieren</a>
+        	<a href="javascript:openSignInForm()">Login</a> | <a href="javascript:openSignUpForm()">Register</a>
 			<?php
 				else:
 			?>
