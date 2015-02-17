@@ -24,7 +24,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 			
 			if($data['approved']!='1')
 			{
-				echo '<script type="text/javascript">alert("Konto ist nicht aktiviert");</script>';
+				echo '<script type="text/javascript">alert("Account not found!");</script>';
 			}
 			else
 			{	
