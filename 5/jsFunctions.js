@@ -83,7 +83,6 @@ function completeArrowDown_was()
 
 }
 
-
 function completeArrowUp_wo()
 {
 	var liSize=$("#woList li").size();
@@ -113,7 +112,6 @@ function completeArrowUp_wo()
 	
 	arrowStatus--;
 	arrowFirst=false;
-
 }
 
 function completeArrowDown_wo()
@@ -162,9 +160,6 @@ function openSignUpForm()
 	$("#overlay").fadeIn();
 }
 
-
-
-
 function openContactInquiry()
 {	
 	$("#contactInquiry").fadeIn();
@@ -177,7 +172,6 @@ function openSignInForm()
 	$("#signin").fadeIn();
 	$("#overlay").fadeIn();
 }
-
 
 function acceptRules(s)
 { 
