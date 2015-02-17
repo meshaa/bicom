@@ -32,9 +32,9 @@ function searchBusiness(name)
 	}
 	
 	if($("#name").is(':checked')==true && $("#branche").is(':checked')==false)
-		type=1; //only name
+		type=1; 
 	else if($("#name").is(':checked')==false && $("#branche").is(':checked')==true)
-		type=2; //only branche
+		type=2; 
 	
 	$.ajax({
 		type: 'GET',
@@ -115,12 +115,10 @@ function signUp()
 
 	if( name=="" || name==" " || userName=="" || userName==" " || adress=="" || adress==" "  || password=="" || password==" ")
 	{
-		alert("Bitte füllen Sie die leeren Bereiche.")
+		alert("Please fill in the empty fields")
 		return false;
 	}
 	
-		
-		
 		$("#signUptableform").fadeOut('fast');
 		
 		if(memtype==0)
@@ -166,15 +164,14 @@ function sendWebsiteInquiry()
 
 	if( name=="" || name==" " || adress=="" || adress==" " || password=="" || password==" " )
 	{
-		alert("Bitte füllen Sie die leeren Bereiche.")
+		alert("Please fill in the empty fields.")
 		return false;
 	}
 	
-	
 		$("#mailform_1").fadeOut("fast",function()
-								{
-									$("#mailform_2").fadeIn("fast");
-								});
+	{
+		$("#mailform_2").fadeIn("fast");
+		});
 		
 		$.ajax({
 			type: 'POST',
@@ -192,20 +189,18 @@ function sendContactInquiry()
 {
 	var name=$("#mailform2_name").val();
 	var adress=$("#mailform2_adress").val();
-        
-	var password=$("#mailform2_password").val();
+        var password=$("#mailform2_password").val();
 	
-
 	if(name=="" || name==" " || adress=="" || adress==" " || password=="" || password==" " )
 	{
-		alert("Bitte füllen Sie die leeren Bereiche.")
+		alert("Please fill in the empty fields.")
 		return false;
 	}
 	
 		$("#mailform2_1").fadeOut("fast",function()
-								{
-									$("#mailform2_2").fadeIn("fast");
-								});
+	{
+		$("#mailform2_2").fadeIn("fast");
+	         });
 		
 		$.ajax({
 			type: 'POST',
