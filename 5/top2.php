@@ -14,7 +14,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 
 		if($control==0)
 		{
-		 echo '<script type="text/javascript">alert("Konto nicht gefunden!");</script>';
+		 echo '<script type="text/javascript">alert("Account not found!");</script>';
 		}
 		else
 		{
@@ -92,7 +92,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
        <tr><td><input type="button" value="Add user!" id="sendTo" onclick="signUp()" /></td></tr>
     </table>
 	<p id="signUpResult" style="font-family:Myriad Pro; font-size:14px;display:none;">
-		Danke 
+	Thank you
 	</p>
 	</div>
      
@@ -117,7 +117,7 @@ error_reporting( error_reporting() & ~E_NOTICE );
 			?>
 				 <a href="search.php?was=Designer&wo=&x=71&y=19&type=branche">Start</a> |
 				  <a target="_blank" href="http://stranica.6te.net/download_excel.php">Save file</a> |
-				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">Ausloggen</a>
+				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">Logout</a>
 			<?php
 				endif;
 			?>
