@@ -89,7 +89,7 @@
        <tr><td><input type="button" value="Add user!" id="sendTo" onclick="signUp()" /></td></tr>
     </table>
 	<p id="signUpResult" style="font-family:Myriad Pro; font-size:14px;display:none;">
-		Danke 
+	Thank you
 	</p>
 	</div>
      
@@ -113,7 +113,7 @@
 				 
               <div align="left">   <a href="search.php?was=Designer&wo=&x=71&y=19&type=branche">Start</a> | <a href="javascript:openSignUpForm()">Add user</a>|
 				  <a target="_blank" href="http://stranica.6te.net/download_excel.php">Save file</a> |
-				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">logout</a></div>
+				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">Logout</a></div>
 			<?php
 				endif;
 			?>
