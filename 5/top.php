@@ -12,7 +12,7 @@
 
 		if($control==0)
 		{
-		 echo '<script type="text/javascript">alert("Konto nicht gefunden!");</script>';
+		 echo '<script type="text/javascript">alert("Account not found!");</script>';
 		}
 		else
 		{
@@ -22,7 +22,7 @@
 			
 			if($data['approved']!='1')
 			{
-				echo '<script type="text/javascript">alert("Konto ist nicht aktiviert");</script>';
+				echo '<script type="text/javascript">alert("Account not found!");</script>';
 			}
 			else
 			{	
@@ -113,7 +113,7 @@
 				 
               <div align="left">   <a href="search.php?was=Designer&wo=&x=71&y=19&type=branche">Start</a> | <a href="javascript:openSignUpForm()">Add user</a>|
 				  <a target="_blank" href="http://stranica.6te.net/download_excel.php">Save file</a> |
-				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">Ausloggen</a></div>
+				 <a href="logout.php?red=<?=str_replace("/","",$_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'];?>">logout</a></div>
 			<?php
 				endif;
 			?>
