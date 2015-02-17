@@ -69,10 +69,7 @@
     </table>
 	</form>
 </div>	
-	
-    
-    
-    
+
 <div id="signUp" style="display:none;">
 	<p style="padding:0;margin:0;color:#246074;font-family:Rockwell;font-size:22px;">Add User</p>
 	<table border="0" cellpadding="0" cellspacing="0" id="signUptableform">
@@ -88,7 +85,6 @@
         <tr><td colspan="2" class="Leerzeilen"></td></tr>
         <tr><td class="lbl">Password</td><td><input type="text" name="password" class="txt" id="signUp_password" /></td></tr>
        
-        
 	   <tr><td colspan="2" class="Leerzeilen"></td></tr>
        <tr><td><input type="button" value="Add user!" id="sendTo" onclick="signUp()" /></td></tr>
     </table>
@@ -98,9 +94,6 @@
 	</div>
      
 </div>
-
-
-
 
 <div id="container">
 <table border="0" cellpadding="0" cellspacing="0" id="ustlayout">
