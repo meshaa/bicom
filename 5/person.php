@@ -23,7 +23,7 @@
 			$adress=$_POST['update_adress'];
 			$password=$_POST['update_password'];
 			
-			mysql_query("UPDATE company SET password='$password'	,contactPerson_name='$contactPerson_name',adress='$adress',companyName='$companyName'				 WHERE companyId='$companyId'");
+			mysql_query("UPDATE company SET password='$password',contactPerson_name='$contactPerson_name',adress='$adress',companyName='$companyName'				 WHERE companyId='$companyId'");
 			mysql_query("UPDATE user SET userName='$userName' WHERE userId=(SELECT userId FROM company WHERE companyId='$companyId')");
 		}
 		
