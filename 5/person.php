@@ -89,46 +89,46 @@
 
        </table>
 
-        <div class="company">
+   <div class="company">
                  
-                <table border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                <td align="left" class="col1">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td align="left" class="col1">
                    
-                <form action="" method="post"> 
+  <form action="" method="post"> 
                      
-                <p class="name" >  <tr><td>Name</td><td> &#160;&#160; <input size="30" type="text" name="update_companyName" id="update_companyName" class="txt" value="<?=$company['companyName'];?>" </td></tr></p>
-                <tr><td>&nbsp; </td><td> </td></tr>
-                <tr><td>Username</td><td> &#160;&#160;  <input size="30" type="text" name="update_adress" id="update_adress" class="txt" value="<?=$company['adress'];?>" />     </td></tr>
-                <tr><td>&nbsp; </td><td> </td></tr>
-                <tr><td>E-mail</td><td>&#160;&#160;<input size="30" type="text" name="update_website" id="update_website" class="txt" value="<?=$company['website']; ?> " />
-                </td></tr>
-                <tr><td>&nbsp; </td><td> </td></tr>
-                <tr><td>Password</td><td> &#160;&#160; <input size="30" type="text" name="update_password" id="update_password" class="txt" value="<?=$company['password'];?>" /> 
-		        </td></tr>
-                <tr><td>&nbsp; </td><td> </td></tr>
+        <p class="name" >  <tr><td>Name</td><td> &#160;&#160; <input size="30" type="text" name="update_companyName" id="update_companyName" class="txt" value="<?=$company['companyName'];?>" </td></tr></p>
+        <tr><td>&nbsp; </td><td> </td></tr>
+        <tr><td>Username</td><td> &#160;&#160;  <input size="30" type="text" name="update_adress" id="update_adress" class="txt" value="<?=$company['adress'];?>" />     </td></tr>
+        <tr><td>&nbsp; </td><td> </td></tr>
+        <tr><td>E-mail</td><td>&#160;&#160;<input size="30" type="text" name="update_website" id="update_website" class="txt" value="<?=$company['website']; ?> " />
+        </td></tr>
+        <tr><td>&nbsp; </td><td> </td></tr>
+        <tr><td>Password</td><td> &#160;&#160; <input size="30" type="text" name="update_password" id="update_password" class="txt" value="<?=$company['password'];?>" /> 
+	</td></tr>
+        <tr><td>&nbsp; </td><td> </td></tr>
               
-                <tr><td></td><td>
-               	</td></tr>
+        <tr><td></td><td>
+        </td></tr>
                
-        <input type="hidden" size="1" type="text" name="update_Lat" id="update_Lat" class="txtarea" value="<?=$company['Lat'];?>"/>  
-        <input type="hidden" size="1" type="text" name="upda_Lat" id="upda_Lat" class="txtarea" value="<?=$company['Lat'];?>"/>      
+   <input type="hidden" size="1" type="text" name="update_Lat" id="update_Lat" class="txtarea" value="<?=$company['Lat'];?>"/>  
+   <input type="hidden" size="1" type="text" name="upda_Lat" id="upda_Lat" class="txtarea" value="<?=$company['Lat'];?>"/>      
               
-               <tr><td></td><td> 	
-      	       <p>&nbsp; </p>
+        <tr><td></td><td> 	
+      	<p>&nbsp; </p>
 	
-         <input  type="submit" value="Save edit" name="update_send" onClick="alert( 'Save' )"  style="margin-left:-50px; margin-top:20px;" />
-         <input type="submit" value="Delete user" name="fertig" style="margin-left:50px; margin-top:20px;"  />
+   <input  type="submit" value="Save edit" name="update_send" onClick="alert( 'Save' )"  style="margin-left:-50px; margin-top:20px;" />
+   <input type="submit" value="Delete user" name="fertig" style="margin-left:50px; margin-top:20px;"  />
 		  
 	    
-          </p>
+        </p>
     
-         <font align="right" size="6" color="red"><?=$company['Lat'];?></font> 
-         </form>
-         </form>
+        <font align="right" size="6" color="red"><?=$company['Lat'];?></font> 
+        </form>
+        </form>
    
-         </td>								
-         </table>
+        </td>								
+        </table>
 <body>
 </html>
 
