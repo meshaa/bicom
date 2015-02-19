@@ -56,7 +56,7 @@
 		$company_count=$company_count['total'];
 		$pageNumber=ceil($company_count/10);				
 		$limit=$page*10;
-        	$company=mysql_query("SELECT * FROM company WHERE cityId='".$cityData['cityId']."' ORDER BY companyName ASC LIMIT $limit,10");	
+      	$company=mysql_query("SELECT * FROM company WHERE cityId='".$cityData['cityId']."' ORDER BY companyName ASC LIMIT $limit,10");	
 	}
 	
 	
@@ -66,7 +66,7 @@
 		{
 			$businessData=mysql_fetch_array(mysql_query("SELECT * FROM business WHERE businessName='$was'"));
 			$cityData=mysql_fetch_array(mysql_query("SELECT * FROM city WHERE cityName='$wo' OR postalCode='$wo'"));
- 		        $company_count=mysql_fetch_array(mysql_query("SELECT COUNT(companyId) AS total FROM company WHERE businessId='".$businessData['businessId']."'AND cityId='".$cityData['cityId']."'"));
+ 		    $company_count=mysql_fetch_array(mysql_query("SELECT COUNT(companyId) AS total FROM company WHERE businessId='".$businessData['businessId']."'AND cityId='".$cityData['cityId']."'"));
 			$company_count=$company_count['total'];
 			$pageNumber=ceil($company_count/10);				
 			$limit=$page*10;
@@ -80,8 +80,7 @@
 			$company_count=$company_count['total'];
 			$pageNumber=ceil($company_count/10);				
 			$limit=$page*10;
-			$company=mysql_query("SELECT * FROM company WHERE companyName LIKE ('$was%') AND cityId='".$cityData['cityId']."' 
-												ORDER BY companyName ASC LIMIT $limit,10");	
+			$company=mysql_query("SELECT * FROM company WHERE companyName LIKE ('$was%') AND cityId='".$cityData['cityId']."'ORDER BY companyName ASC LIMIT $limit,10");	
 		}
 	}
         
@@ -148,7 +147,7 @@
                         </tr>
                     </table>
                 </div>
-                       <?php
+            <?php
             
 				endwhile;
 				
