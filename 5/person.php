@@ -12,7 +12,7 @@
 	include("config.php");
 	include("top2.php");
 	$companyId=intval($_GET['companyId']);
-    error_reporting( error_reporting() & ~E_NOTICE );
+        error_reporting( error_reporting() & ~E_NOTICE );
 	error_reporting( error_reporting() & 0 );
        
 	
