@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>User administration</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/application.css" rel="stylesheet">
+    <link href="./css/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    
+    <div id="header-region"></div>
+
+    <div id="main-region" class="container"></div>
+
+    <div id="dialog-region"></div>
+
+    <script type="text/template" id="header-template">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#contacts">User administration</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav"></ul>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/template" id="header-link">
+      <a href="#{{- i18nUrl(url) }}">{{- t("menu." + name) }}</a>
+    </script>
+    
+     <script type="text/template" id="contact-list">
+      <thead>
+        <tr>
+          <th>Full name</th>
+          <th>Username</th>
+		  <th>E-mail</th>
+          <th>Password</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </script>
+
+
+    <script type="text/template" id="contact-list" id="contact-form" >
+       <tbody>
+      </tbody>
+    </script>
+
+    <script type="text/template" id="contact-list-none">
+      <td colspan="3">No contacts to display.</td>
+    </script>
+
+    <script type="text/template" id="contact-list-item">
+	       
+	
+     <td><%- firstName %></td>
+	 <td><%- userName %></td>
+	 <td><%- email %> </td>
+	 <td><%- password %> </td>
+		  	  
+     
+	  <td>
+       <td>
+        <a href="#{{- i18nUrl('contact/' + id) }}" class="btn btn-small js-show">
+          <i class="icon-eye-open"></i>
+		   Show
+        </a>
+        <a href="#{{- i18nUrl('contact/' + id + '/edit') }}" class="btn btn-small js-edit">
+          <i class="icon-pencil"></i>
+         Edit
+        </a>
+        <button class="btn btn-small js-delete">
+          Delete
+        </button>
+      </td>
+    </script>
+
+    <script type="text/template" id="missing-contact-view">
+      <div class="alert alert-error">This contact does not exist !</div>
+    </script>
+
+    <script type="text/template" id="contact-view">
+		
+	<table border="1" style="width:100%">
+     <tr>
+   <td>Full name</td>
+          <td>Username</td>
+		  <td>E-mail</td>
+          <td>Password</td>
+    </tr>
+    <tr>
+	<td><%- firstName %></td>
+    <td><%- userName %></td>
+    <td><%- email %></td>
+	<td><textarea rows="1" style="width: 100px; height: 15px;" ><%- password %></textarea>
+	</td>
+	</tr>
+    </table>
+        
+	  </script>
+
+
+
+
+    <script type="text/template" id="loading-view">
+	  <h1><%- title %></h1>
+      <p><%- message %></p>
+      <div id="spinner"></div>
+	</script>
+
+
+    <script type="text/template" id="contact-form">
+	
+      <form>
+	  
+        <div class="control-group">
+          <label for="contact-firstName" class="control-label">Full name:</label>
+          <input id="contact-firstName" name="firstName" type="text" value="<%- firstName %>"/>
+        </div>
+        <div class="control-group">
+          <label for="contact-userName" class="control-label">Username:</label>
+          <input id="contact-userName" name="userName" type="text" value="<%- userName %>"/>
+        </div>
+        <div class="control-group">
+          <label for="contact-email" class="control-label">E-mail:</label>
+          <input id="contact-email" name="email" type="text" value="<%- email %>"/>
+        </div>
+		
+		<div class="control-group">
+          <label for="contact-password" class="control-label">Password:</label>
+		  
+          <textarea rows="5" style="overflow:auto"  onkeyup="AutoGrowTextArea(this)" id="textarea1" style="overflow:hidden"   id="contact-password" name="password" type="text"><%- password %></textarea>
+        </div>
+		
+		</div>
+        <button class="btn js-submit">Save</button>
+						
+      </form>
+	  
+	  
+    </script>
+
+    <script type="text/template" id="contact-list-layout">
+	  <div id="panel-region"></div>
+      <div id="contacts-region"></div>
+    </script>
+
+    <script type="text/template" id="contact-list-panel">
+	  <button class="btn btn-primary js-new">Add user</button>
+      <form id="filter-form" class="form-search form-inline pull-right">
+        <div class="input-append">
+          <input type="text" class="span2 search-query js-filter-criterion">
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </form>
+    </script>
+    
+    <script type="text/template" id="pagination-controls">
+      {{ if(totalPages > 1){ }}
+        <ul>
+          {{ if(currentPage > 1){ }}
+            <li><a href="#{{- urlBase ? i18nUrl(urlBase) + 1 : "" }}" class="navigatable" data-page="1">&laquo;</a></li>
+            <li><a href="#{{- urlBase ? i18nUrl(urlBase) + previous  : "" }}" class="navigatable" data-page="{{- previous }}">&lsaquo;</a></li>
+          {{ }else{ }}
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="disabled"><a href="#">&lsaquo;</a></li>
+          {{ } }}
+
+          {{ if(pageSet[0] > 1 ){ }}
+            <li class="disabled"><a href="#">...</a></li>
+          {{ } }}
+
+          {{ _.each(pageSet, function(page){ }}
+            {{ if(page === currentPage){ }}
+              <li class="active disabled"><a href="#">{{- page }}</a></li>
+            {{ }else{ }}
+              <li><a href="#{{- urlBase ? i18nUrl(urlBase) + page  : "" }}" class="navigatable" data-page="{{- page }}">{{- page }}</a></li>
+            {{ } }}
+          {{ }); }}
+
+          {{ if(pageSet[pageSet.length - 1] !== lastPage){ }}
+            <li class="disabled"><a href="#">...</a></li>
+            <li><a href="#{{- urlBase ? i18nUrl(urlBase) + lastPage  : "" }}" class="navigatable" data-page="{{- lastPage }}">{{- lastPage }}</a></li>
+          {{ } }}
+
+          {{ if(currentPage !== lastPage){ }}
+            <li><a href="#{{- urlBase ? i18nUrl(urlBase) + next  : "" }}" class="navigatable" data-page="{{- next }}">&rsaquo;</a></li>
+            <li><a href="#{{- urlBase ? i18nUrl(urlBase) + lastPage  : "" }}" class="navigatable" data-page="{{- lastPage }}">&raquo;</a></li>
+          {{ }else{ }}
+            <li class="disabled"><a href="#">&rsaquo;</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
+          {{ } }}
+        </ul>
+      {{ } }}
+    </script>
+
+    <script type="text/template" id="paginated-view">
+      <div class="js-pagination-controls"></div>
+      <div class="js-pagination-main"></div>
+    </script>
+
+    
+
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/jquery/jquery-ui-1.10.3.js"></script>
+    <script src="./js/jquery/json2.js"></script>
+    <script src="./js/jquery/underscore.js"></script>
+    <script src="./js/jquery/backbone.js"></script>
+    <script src="./js/jquery/backbone.picky.js"></script>
+    <script src="./js/jquery/backbone.syphon.js"></script>
+    <script src="./js/jquery/backbone.localstorage.js"></script>
+    <script src="./js/jquery/backbone.marionette.js"></script>
+    <script src="./js/jquery/spin.js"></script>
+    <script src="./js/jquery/spin.jquery.js"></script>
+    <script src="./js/jquery/backbone.paginator.js"></script>
+    
+     <script src="./js/jquery/backbone-associations.js"></script>
+    <script src="./js/jquery/backbone.validation.js"></script>
+    
+ <script src="./js/jquery/polyglot.js"></script>
+ 
+    <script src="./js/app/dialog.js"></script>
+    <script src="./js/manager.js"></script>
+    <script src="./js/AutoGrow.js"></script>
+    <script src="./js/app/storage.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/views.js"></script>
+    
+        
+
+    <script src="./js/app/contacts/contacts_app.js"></script>
+    <script src="./js/app/contacts/views.js"></script>
+    <script src="./js/app/contacts/list_view.js"></script>
+    <script src="./js/app/contacts/list_controller.js"></script>
+    <script src="./js/app/contacts/show_view.js"></script>
+    <script src="./js/app/contacts/show_controller.js"></script>
+    <script src="./js/app/contacts/edit_view.js"></script>
+    <script src="./js/app/contacts/edit_controller.js"></script>
+    <script src="./js/app/contacts/new_view.js"></script>
+
+    
+    <script src="./js/app/header_app.js"></script>
+    <script src="./js/app/list_show.js"></script>
+    <script src="./js/app/list_controller.js"></script>
+
+    <script type="text/javascript">
+	   ContactManager.start();
+    </script>
+	
+	
+  </body>
+</html>
