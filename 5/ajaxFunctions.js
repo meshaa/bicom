@@ -1,4 +1,4 @@
-function searchBusiness(name)
+function searchFull(name)
 {
 	//38 up
 	//40 down
@@ -53,7 +53,7 @@ function searchBusiness(name)
 	});
 }
 
-function searchPlace(name)
+function searchOther(name)
 {
 	//38 up
 	//40 down
